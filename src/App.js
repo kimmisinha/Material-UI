@@ -17,6 +17,11 @@ function App() {
     <Button variant='contained' color="secondary">Click Me</Button>
     <Button variant='contained' color="primary" href="https://google.com">Link</Button>
     <Button variant='contained' disabled>Disabled</Button>
+    <h1>Outlined Button</h1>
+    <Button variant="outlined">Click Me</Button>
+    <Button variant="outlined" color="secondary">Secondary</Button>
+    <Button variant="outlined" href="https://google.com" color="primary">Link</Button>
+    <Button variant="outlined" disabled>Disabled</Button>
 
     </div>
   );
