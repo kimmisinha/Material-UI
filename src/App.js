@@ -11,6 +11,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import Rating from '@mui/material/Rating';
 
 function App() {
   return (
@@ -68,6 +72,27 @@ function App() {
    <Checkbox checked/>
    <Checkbox checked={true} color="success"/>
    <Checkbox icon={<FavoriteBorder />}checkedIcon={<FavoriteBorder />}onChange={() => console.log("Checked Done")}/>
+   <FormControlLabel control={<Checkbox  />} label='India'/>
+   <FormControlLabel control={<Checkbox  />} label='India' labelPlacement="bottom"/>
+   <FormControlLabel control={<Checkbox  />} label='India' labelPlacement="top"/>
+   <FormControlLabel control={<Checkbox  />} label='Bottom' labelPlacement='bottom'/>
+   <FormControlLabel control={<Checkbox  />} label='End' labelPlacement='end'/>
+   <h1>Radio Button</h1>
+   <Radio value='male' name='radio-button'/>
+   <Radio value='female' name='radio-button'/>
+   <FormControlLabel control={<Radio  />} label='Top' labelPlacement='top'/>
+    <FormControlLabel control={<Radio  />} label='Start' labelPlacement='start'/>
+    <FormControlLabel control={<Radio  />} label='Bottom' labelPlacement='bottom'/>
+    <FormControlLabel control={<Radio  />} label='End' labelPlacement='end'/>
+    <RadioGroup row>  
+    <FormControlLabel control={<Radio  />}  label='Male'/>
+    <FormControlLabel control={<Radio  />}  label='Male'/>
+    <FormControlLabel control={<Radio  />}  label='Other'/>
+    </RadioGroup>
+    <h1>Rating</h1>
+    <Rating value={3} readOnly/>
+    <Rating defaultValue={3.7} precision={2.5} />
+
    </div>
   );
 }
