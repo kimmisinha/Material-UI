@@ -1,21 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import Button from '@mui/material/Button';
+import logo from "./logo.svg";
+import "./App.css";
+import Button from "@mui/material/Button";
+import AbcIcon from "@mui/icons-material/Abc";
 
 function App() {
   return (
     <div className="App">
-<Button color="secondary">Secondary</Button>
-<Button variant="contained" color="success">
-  Success
-</Button>
-<Button variant="outlined" href="https://github.com/geekyshow1/muiv5" color="error">
-  Error
-</Button>
-<Button  disabled>Secondary</Button>
+          <h1>Text Button</h1>
 
-</div>
+      <Button variant="text">Text</Button>
+      <Button color="secondary">Secondary</Button>
+      <Button color="primary" href="https://google.com">Link</Button>
+      <Button disabled>Disabled</Button>
+      <h1>Contained Button</h1>
+      <Button variant='contained'>Click Me</Button>
+    <Button variant='contained' color="secondary">Click Me</Button>
+    <Button variant='contained' color="primary" href="https://google.com">Link</Button>
+    <Button variant='contained' disabled>Disabled</Button>
 
+    </div>
   );
 }
 
