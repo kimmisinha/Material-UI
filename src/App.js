@@ -1,8 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Button from "@mui/material/Button";
-import AbcIcon from "@mui/icons-material/Abc";
-
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
 function App() {
   return (
     <div className="App">
@@ -25,7 +26,14 @@ function App() {
     <Button variant="contained" color="secondary" size="small">Small</Button>
     <Button variant="contained" color="secondary" size="medium">Medium</Button>
     <Button variant="contained" color="secondary" size="large">Large</Button>  
-
+    <h1>Button with Icon</h1>
+    <Button variant="contained" color="secondary" startIcon={<DeleteIcon />} >Delete</Button>
+    <Button variant="contained" color="warning" endIcon={<AcUnitIcon />} >Delete</Button>
+    <h1>Icon Button</h1>
+    <IconButton color="secondary">
+      <DeleteIcon/>
+    </IconButton>
+    
     </div>
   );
 }
