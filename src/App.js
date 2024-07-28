@@ -5,11 +5,12 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import NavigationIcon from '@mui/icons-material/Navigation';
+import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
 function App() {
   return (
@@ -62,8 +63,12 @@ function App() {
    <Fab color="Primary"><AddIcon/></Fab>
    <Fab color="Primary"><EditIcon/></Fab>
    <Fab disabled><FavoriteIcon/></Fab>
-
-    </div>
+   <h1>Checkbox</h1>
+   <Checkbox/>
+   <Checkbox checked/>
+   <Checkbox checked={true} color="success"/>
+   <Checkbox icon={<FavoriteBorder />}checkedIcon={<FavoriteBorder />}onChange={() => console.log("Checked Done")}/>
+   </div>
   );
 }
 
