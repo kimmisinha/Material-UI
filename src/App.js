@@ -133,9 +133,68 @@ function App() {
     <Box fontWeight="bold">Hello</Box>
     <Box fontWeight={500}></Box>
     <h1>Font Size</h1>
-    <Box fontSize={24}></Box>
+    <Box fontSize={24}>kimmi</Box>
     <h1>Font Style</h1>
     <Box fontStyle="italic">Hello</Box> 
+    <h1>Color</h1>
+    <Box color="primary.main">primary</Box>
+    <Box color="secondary.main">secondary</Box>
+    <Box color="error.main">error</Box>
+    <Box color="warning.main">warning</Box>
+    <Box color="info.main">info</Box>
+    <Box color="success.main">success</Box>
+    <h1>Background Color</h1>
+    <Box bgcolor="primary.main">primary</Box>
+    <Box bgcolor="secondary.main">secondary</Box>
+    <Box bgcolor="error.main">error</Box>
+    <Box bgcolor="warning.main">warning</Box>
+    <Box bgcolor="info.main">info</Box>
+    <Box bgcolor="success.main">success</Box>
+    <h1>Margin</h1>
+    <Box m={10}>All Side Margin</Box>
+    <Box mt={10}>Margin Top</Box>
+    <Box mb={10}>Margin Bottom</Box>
+    <Box ml={10}>Margin Left</Box>
+    <Box mr={10}>Margin Right</Box>
+    <Box mx={10}>Margin Left Right</Box>
+    <Box my={10}>Margin Top Bottom</Box>
+    <h1>Padding</h1>
+    <Box p={10}> All Side Padding</Box>
+    <Box pt={10}>Padding Top</Box>
+    <Box pb={10}>Padding Bottom</Box>
+    <Box pl={10}>Padding Left</Box>
+    <Box pr={10}>Padding Right</Box>
+    <Box px={10}>Padding Left Right</Box>
+    <Box py={10}>Padding Top Bottom</Box>
+    <h1>Width Sizing</h1>
+    <Box width={1/4} bgcolor="red">Width 1/4</Box>
+    <Box width={1} bgcolor="red">Width 100%</Box>
+    <Box width="50%"bgcolor="red">Width 50%</Box>
+    <Box width={500} bgcolor="pink">Width 500px</Box>
+    <Box width={500} bgcolor="pink">Width 500px</Box>
+    <h1>Height Sizing</h1>
+    <Box height="50%" bgcolor="yellow">Height 50%</Box>
+    <Box height={500} bgcolor="pink">Height 500px</Box>
+    <h1>Border</h1>
+    <stack spacing={4}>
+    <Box border={1}>Hello 1</Box>
+    <Box borderTop={1}>Hello 2</Box>
+    <Box borderBottom={1}>Hello 3</Box>
+    <Box borderLeft={1}>Hello 4</Box>
+    <Box borderRight={1}>Hello 5</Box>
+    </stack>
+    <stack spacing={4}>
+    <Box border={0}>Hello</Box>
+    <Box border={1} borderTop={0}>Hello 2</Box>
+      <Box border={1} borderBottom={0}>Hello 3</Box>
+      <Box border={1} borderLeft={0}>Hello 4</Box>
+      <Box border={1} borderRight={0}>Hello 5</Box>
+    </stack>
+    <h1>Border Color</h1>
+    <Box border={1} borderColor="secondary.main">Hello</Box>
+    <h1>Border Raduis</h1> 
+    <Box border={1} borderRadius="40%" width={300} height={300}></Box>
+    <Box border={1} borderRadius={16} width={300} height={300}></Box>
 
    </div>
   );
