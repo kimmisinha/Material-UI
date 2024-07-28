@@ -15,6 +15,12 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import Rating from '@mui/material/Rating';
+import Slider from '@mui/material/Slider';
+import Box from '@mui/material/Box';
+import Switch from '@mui/material/Switch';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/system/Stack';
+
 
 function App() {
   return (
@@ -92,6 +98,44 @@ function App() {
     <h1>Rating</h1>
     <Rating value={3} readOnly/>
     <Rating defaultValue={3.7} precision={2.5} />
+     <h1>Slider</h1>
+     <Slider value={5} color='secondary'/>
+     <Slider defaultValue={30} color='secondary'/>
+   <Box sx={{height:300}}>
+   <Slider orientation='vertical' defaultValue={30} color='secondary'/>
+   </Box>
+   <h2>Switch</h2>
+   <Switch/>
+   <Switch defaultChecked/>
+   <Switch disabled defaultChecked/>
+   <FormControlLabel control={<Switch />} label='Dark'/> 
+   <h1>Text message</h1>
+   <TextField />
+   <TextField label='Name' />
+   <TextField label='Standard' variant='standard'/>
+   <TextField label='Outlined' variant='outlined'/>
+   <TextField label='Filled' variant='filled'/>
+   <h1>Box</h1>
+   <Box>Hello World</Box>
+   <h2>Stack</h2>
+   <Stack spacing={2} direction='row'>
+   <Button variant='contained'>Click Me</Button>
+      <Button variant='contained' color="secondary">Click Me</Button>
+      <Button variant='contained' color="primary" href="https://google.com">Link</Button>
+      <Button variant='contained' disabled>Disabled</Button>
+  </Stack>
+  <h1>These are System Key/Props</h1>
+    <h1>Alignment</h1>
+    <Box textAlign="left">Hello</Box>
+    <Box textAlign="center">Hello</Box>
+    <Box textAlign="right">Hello</Box>
+    <h1>Font Weight</h1>
+    <Box fontWeight="bold">Hello</Box>
+    <Box fontWeight={500}></Box>
+    <h1>Font Size</h1>
+    <Box fontSize={24}></Box>
+    <h1>Font Style</h1>
+    <Box fontStyle="italic">Hello</Box> 
 
    </div>
   );
