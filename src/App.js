@@ -20,9 +20,22 @@ import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/system/Stack';
+import Avatar from '@mui/material/Avatar';
+import AvatarGroup from '@mui/material/AvatarGroup';
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
 
 
 function App() {
+  const handleDelete = () => {
+    console.info('You clicked the delete icon.');
+  };
+  
+  const handleClick = () => {
+    console.info('You clicked the Chip.');
+  };
   return (
     <div className="App">
     <h1>Text Button</h1>
@@ -195,7 +208,54 @@ function App() {
     <h1>Border Raduis</h1> 
     <Box border={1} borderRadius="40%" width={300} height={300}></Box>
     <Box border={1} borderRadius={16} width={300} height={300}></Box>
-
+    <h1>Avatar</h1>
+    <Avatar>kimmi</Avatar>
+    <Avatar src="https://cdn.pixabay.com/photo/2016/11/29/09/29/woman-1868717_960_720.jpg" />
+    <Avatar><DeleteIcon /></Avatar>
+    <AvatarGroup total={24} borderRadius="40%">
+    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+      <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+      <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
+      <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+    </AvatarGroup>
+    <h1>Badge</h1>
+    <Stack spacing={4} direction="row">
+    <Badge badgeContent={4} color="primary">
+      <MailIcon color="action" />
+    </Badge>
+    <Badge badgeContent={100} color="success" max={40}>
+        <MailIcon />
+      </Badge>
+      <Badge color="secondary" badgeContent={0} showZero>
+    <MailIcon />
+   </Badge>
+   <Badge color="secondary" badgeContent={1000} max={999}>
+   <MailIcon />
+   </Badge>
+   <Badge color="primary" variant="dot">
+        <MailIcon />
+      </Badge>
+    </Stack>
+    <h1>Chip</h1>
+    <Stack direction="row" spacing={1}>
+      <Chip label="Chip Filled" />
+      <Chip label="Chip Outlined" variant="outlined" />
+      <Chip label="Clickable" onClick={handleClick} />
+      <Chip label="Clickable" variant="outlined" onClick={handleClick} />
+      <Chip label="Deletable" onDelete={handleDelete} />
+      <Chip label="Deletable" variant="outlined" onDelete={handleDelete} />
+      <Chip avatar={<Avatar>M</Avatar>} label="Avatar" />
+      <Chip
+        avatar={<Avatar alt="Natacha" src="/static/images/avatar/1.jpg" />}
+        label="Avatar"
+        variant="outlined"
+      />
+    </Stack>
+    <h1>Divider</h1>
+    <Divider />
+    <Divider>CENTER</Divider>
+    <Divider textAlign="left">LEFT</Divider>
+   
    </div>
   );
 }
