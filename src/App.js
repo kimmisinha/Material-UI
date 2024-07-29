@@ -54,10 +54,15 @@ import Toolbar from "@mui/material/Toolbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
+import { CustomStyle } from "./Style";
+import { ThemeProvider } from '@mui/material/styles';
+import {customTheme} from './theme';
+
 function App() {
+  const btnStyle = { 
+    bgcolor:'green', 
+    color:'black' 
+  }
   const handleDelete = () => {
     console.info("You clicked the delete icon.");
   };
@@ -525,9 +530,7 @@ function App() {
         </Typography>
         <Button color="inherit">Login</Button>
       </AppBar>
-
-
-      <h1>Grid</h1>
+ <h1>Grid</h1>
   <Grid container spacing={2} direction="row">
   <Grid item lg={3}  md={4} sm={6} xs={12}>
     <Box bgcolor="yellow" p={5}  textAlign="center">1</Box>
@@ -586,7 +589,6 @@ function App() {
     <Box bgcolor="pink" p={5}  textAlign="center">3</Box>
   </Grid>
 </Grid>
-
      <h3>Paper</h3>
     <Grid container spacing={4}>
       <Grid item lg={3} md={4} sm={6} xs={12}>
@@ -606,7 +608,16 @@ function App() {
         <Box bgcolor="blue" p={5} textAlign="center">4</Box>
       </Grid>
     </Grid> 
-
+    <h1>Customization</h1>
+    <Button variant='contained' color="secondary">Hello</Button>
+    <Button variant='contained' style={{backgroundColor:'red', color:'black' }}>Hello</Button>
+    <Button variant='contained' sx={{ backgroundColor:'blue', color:'yellow' }}>Hello</Button>
+    <Button variant='contained' sx={{ bgcolor:'yellow', color:'black' }}>Hello</Button>
+    <Button variant="contained" sx={btnStyle}>HELLO</Button>
+    < ThemeProvider theme={customTheme}>
+    <Button variant='contained' color="secondary">Hello</Button>
+    <Button variant='contained' color="mycolor">Hello</Button>
+    </ThemeProvider>
     </div>
   );
 }
