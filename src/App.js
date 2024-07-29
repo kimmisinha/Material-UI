@@ -26,7 +26,32 @@ import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
-
+import List from '@mui/material/List';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import ListItem from '@mui/material/ListItem';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import Alert from '@mui/material/Alert';
+import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress from '@mui/material/LinearProgress';
+import Skeleton from '@mui/material/Skeleton';
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function App() {
   const handleDelete = () => {
@@ -255,8 +280,140 @@ function App() {
     <Divider />
     <Divider>CENTER</Divider>
     <Divider textAlign="left">LEFT</Divider>
-   
-   </div>
+    <h1>List</h1>
+    <List>
+      <ListItem disablePadding>
+        <ListItemButton>
+          <ListItemText primary="Drafts" />
+        </ListItemButton>
+      </ListItem>
+      <ListItem disablePadding>
+        <ListItemButton>
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText primary="Inbox" />
+        </ListItemButton>
+      </ListItem>
+    </List>
+
+    <h1>Table</h1>
+    <TableContainer>
+    <Table>
+    <TableHead>
+          <TableRow>
+            <TableCell>No</TableCell>
+            <TableCell align="right">Name</TableCell>
+            <TableCell align="right">Roll</TableCell>
+            <TableCell align="right">Class</TableCell>
+            <TableCell align="right">Subject</TableCell>
+          </TableRow>
+        </TableHead>
+
+        <TableBody>
+          <TableRow>
+            <TableCell component="th" scope="row">1</TableCell>
+            <TableCell align="right">Sonam</TableCell>
+            <TableCell align="right">101</TableCell>
+            <TableCell align="right">11</TableCell>
+            <TableCell align="right">Math</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell component="th" scope="row">2</TableCell>
+            <TableCell align="right">Rahul</TableCell>
+            <TableCell align="right">102</TableCell>
+            <TableCell align="right">11</TableCell>
+            <TableCell align="right">Math</TableCell>
+          </TableRow>
+        </TableBody>
+    </Table>
+    </TableContainer>
+    <h1>Tooltip</h1>
+    <Tooltip title="Delete">
+      <IconButton>
+        <DeleteIcon />
+      </IconButton>
+    </Tooltip>
+    <h1>Typography</h1>
+    <Typography variant="h1">Heading H1</Typography>
+    <Typography variant="h6">Heading H6</Typography>
+    <Typography variant="subtitle1">Subtitle 1</Typography>
+    <Typography variant="subtitle2">Subtitle 2</Typography>
+    <Typography variant="body1">Body 1</Typography>
+    <Typography variant="body2">Body 2</Typography>
+    <h1>Alert</h1>
+    <Alert severity="success">This is a success Alert.</Alert>
+   <Alert severity="info">This is an info Alert.</Alert>
+   <Alert severity="warning">This is a warning Alert.</Alert>
+   <Alert severity="error">This is an error Alert.</Alert>
+   <h1>Progress</h1>
+   <CircularProgress color="secondary" />
+   <CircularProgress color="success" />
+   <CircularProgress color="inherit" />
+   <LinearProgress />
+   <Stack spacing={1}>
+   <Skeleton variant="circular" width={40} height={40} />
+   <Skeleton variant="rectangular" width={210} height={60} />
+   <Skeleton variant="rounded" width={210} height={60} />
+   </Stack>
+   <h1>Accordion</h1>
+   <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          Accordion 1
+        </AccordionSummary>
+        <AccordionDetails>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          malesuada lacus ex, sit amet blandit leo lobortis eget.
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2-content"
+          id="panel2-header"
+        >
+          Accordion 2
+        </AccordionSummary>
+        <AccordionDetails>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          malesuada lacus ex, sit amet blandit leo lobortis eget.
+        </AccordionDetails>
+      </Accordion>
+      <Accordion defaultExpanded>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3-content"
+          id="panel3-header"
+        >
+          Accordion Actions
+        </AccordionSummary>
+        <AccordionDetails>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          malesuada lacus ex, sit amet blandit leo lobortis eget.
+        </AccordionDetails>
+        <AccordionActions>
+          <Button>Cancel</Button>
+          <Button>Agree</Button>
+        </AccordionActions>
+      </Accordion>
+      <h1>App Bar</h1>
+      <AppBar position="static">
+      <Toolbar>
+      </Toolbar>
+      <IconButton size="large" edge="start" color="inherit" aria-label="menu">
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          News
+        </Typography>
+        <Button color="inherit">Login</Button>
+      </AppBar>
+
+   </div>  
   );
 }
 
